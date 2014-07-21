@@ -1,1 +1,28 @@
+ul {
+  margin-top:20px;
+}
 
+#purchaseEntry {
+  display:none;
+}
+
+#totalChart {
+  display:none;
+}
+
+.clickable {
+  color:darkblue;
+}
+.clickable:hover {
+  color:purple;
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+.float-right {
+  float:right;
+}
+
+#underline {
+  border-bottom: 2px solid black;
+}

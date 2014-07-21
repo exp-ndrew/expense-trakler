@@ -8,43 +8,55 @@
     <title>Expense Tracker</title>
   </head>
     <body>
-    <div class = "container">
+    <div class= "container">
       <h1>Expense Organizer</h1>
-          <div class = "col-md-6">
-            <form id= "category">
-              <div class="form-group">
-                <label for="categories">Add Category</label>
-                <input id="categories" type = "text" placeholder = "add a category.." class="form-control">
-              </div>
-              <button type= "submit" class="btn">Add Category!</button>
-            </form>
-             <ul id="categories"></ul>
-          </div>
-
-          <div class = "col-md-6">
-            <h3 id="categoryTitle"></h3>
-            <form id= "purchases">
-             <div class="form-group">
-                <label for="item">Add Purchase</label>
-                <input id="item" type ="text" placeholder = "Item.." class="form-control">
-                <label for="amount"></label>
-                <input id="amount" step="any" type = "number" placeholder = "Amount.." class="form-control">
-             </div>
-              <button type= "submit" class="btn btn-success">Track!</button>
-          <div>
-            <h5><u>ITEM LIST</u></h5>
-            <table id="lists" class="table-striped" style="width:300px">
-            </table>
-            <table class="table-striped" style="width:300px">
-              <tr>
-                <td><h4>Total</h4> <h4 id="total"></h4></td>
-                <td><h4>Quantity</h4> <h4 id="quantity"></h4></td>
-              </tr>
-            </table>
-          </div>
-            </form>
-      </div>
-    </div>
-    </div>
-    </body>
+      <div class= "row"> <!-- row upper -->
+        <div class="col-md-6"><h3>&nbsp;</h3>
+        </div>
+        <div class="col-md-6"><h3 id="categoryTitle"></h3>
+        </div>
+      </div> <!-- row upper -->
+      <div class="row"> <!--lower -->
+        <div class= "col-md-6"> <!-- left -->
+          <form id= "category">
+            <div class="form-group">
+                <label for="categoryInput">Add Category</label>
+                <input id="categoryInput" type = "text" placeholder = "add a category.." class="form-control">
+            </div> <!-- form group -->
+            <button type= "submit" class="btn">Add Category!</button>
+          </form>
+          <ul id="categories"></ul>
+        </div> <!-- col-md-6 left -->
+        <div class="col-md-6" id="purchaseEntry"> <!--col-md-6 right-->
+          <form id="purchases">
+            <div class="form-group">
+              <label for="item">Add Purchase</label>
+              <input id="item" type ="text" placeholder = "Item.." class="form-control">
+              <label for="price"></label>
+              <input id="price" step="any" type = "number" placeholder = "Price.." class="form-control">
+              <label for="quantity"></label>
+              <input id="quantity" type ="number" placeholder = "Quantity.." class="form-control">
+            </div>
+            <button type= "submit" class="btn btn-success">Track!</button>
+            <div id="totalChart">
+              <br/>
+              <label for="lists">INVENTORY</label>
+              <table id="lists" class="table-striped" style="width:300px">
+                <tr id="underline">
+                  <td><strong>Quantity</strong></td>
+                  <td><strong>Item</strong></td>
+                  <td><strong>Total</strong></td>
+                </tr>
+              </table>
+              <table class="table-striped" style="width:300px">
+                <tr>
+                  <td><h4>Total: <span id="total"></span></h4></td>
+                </tr>
+              </table>
+            </div> <!--totalchart-->
+          </form>
+        </div> <!--col-md-6 right-->
+      </div> <!-- row lower -->
+    </div> <!-- container -->
+  </body>
 </html>
